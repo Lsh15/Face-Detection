@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/redCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/pink_lens"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/blueCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/blue"
+        app:layout_constraintStart_toEndOf="@+id/redCircle"
+        app:layout_constraintTop_toTopOf="@+id/redCircle" />
+
+    <ImageView
+        android:id="@+id/greenCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="10dp"
+        android:src="@drawable/gray_lens"
+        app:layout_constraintStart_toEndOf="@+id/blueCircle"
+        app:layout_constraintTop_toTopOf="@+id/blueCircle" />
+
+    <ImageView
+        android:id="@+id/redCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_25"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/redCircle"
+        app:layout_constraintStart_toStartOf="@+id/redCircle"
+        app:layout_constraintTop_toBottomOf="@+id/redCircle"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/blueCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_25"
+        app:layout_constraintEnd_toEndOf="@+id/blueCircle"
+        app:layout_constraintStart_toStartOf="@+id/blueCircle"
+        app:layout_constraintTop_toBottomOf="@+id/blueCircle"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/greenCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_check_25"
+        app:layout_constraintEnd_toEndOf="@+id/greenCircle"
+        app:layout_constraintStart_toStartOf="@+id/greenCircle"
+        app:layout_constraintTop_toBottomOf="@+id/greenCircle"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <Button
+        android:id="@+id/btnColorChanges"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="색상 변경하기"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueCheck" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="20dp"
+        android:background="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/btnColorChanges"
+        app:layout_constraintTop_toBottomOf="@+id/btnColorChanges" />
+    <!--    <androidx.constraintlayout.widget.Guideline-->
+    <!--        android:id="@+id/guideline3"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintGuide_percent="0.5" />-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
