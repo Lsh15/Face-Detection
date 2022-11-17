@@ -11,9 +11,11 @@ class FaceGraphic  (overlay: GraphicOverlay?, var firebaseVisionFace : FirebaseV
     override fun draw(canvas: Canvas?) {
         var face = firebaseVisionFace ?: return
 
-        drawBitmapOverLandmarkPosition(canvas, face,lensBitmap, FirebaseVisionFaceLandmark.RIGHT_EYE)
-        drawBitmapOverLandmarkPosition(canvas ,face,lensBitmap, FirebaseVisionFaceLandmark.LEFT_EYE)
+        drawBitmapOverLandmarkPosition(canvas, face,lensBitmap, FirebaseVisionFaceLandmark.RIGHT_EYE) // 오른쪽 눈
+        drawBitmapOverLandmarkPosition(canvas ,face,lensBitmap, FirebaseVisionFaceLandmark.LEFT_EYE) // 왼쪽 눈
     }
+
+    // 얼굴에 포인트를 찍어주는 함수
     fun drawBitmapOverLandmarkPosition(canvas: Canvas?, face: FirebaseVisionFace, overlayBitmap: Bitmap, landmarkID : Int){
         val landmark = face.getLandmark(landmarkID)
         val point = landmark?.position
