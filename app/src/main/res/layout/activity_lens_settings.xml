@@ -5,13 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:id="@+id/Settings"
     android:padding="16dp">
 
     <ImageView
         android:id="@+id/redCircle"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="100dp"
         android:src="@drawable/pink_lens"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,12 +22,12 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
-        android:src="@drawable/blue"
+        android:src="@drawable/blue_lens"
         app:layout_constraintStart_toEndOf="@+id/redCircle"
         app:layout_constraintTop_toTopOf="@+id/redCircle" />
 
     <ImageView
-        android:id="@+id/greenCircle"
+        android:id="@+id/grayCircle"
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginStart="10dp"
@@ -35,9 +36,36 @@
         app:layout_constraintTop_toTopOf="@+id/blueCircle" />
 
     <ImageView
+        android:id="@+id/greenCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/green_lens"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="@+id/redCircle"
+        app:layout_constraintTop_toBottomOf="@+id/redCircle" />
+
+    <ImageView
+        android:id="@+id/violetCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/violet_lens"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="@+id/blueCircle"
+        app:layout_constraintTop_toBottomOf="@+id/blueCircle" />
+
+    <ImageView
+        android:id="@+id/brownCircle"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/brown_lens"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="@+id/grayCircle"
+        app:layout_constraintTop_toBottomOf="@+id/grayCircle" />
+
+    <ImageView
         android:id="@+id/redCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_baseline_check_25"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/redCircle"
@@ -47,8 +75,8 @@
 
     <ImageView
         android:id="@+id/blueCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_baseline_check_25"
         app:layout_constraintEnd_toEndOf="@+id/blueCircle"
         app:layout_constraintStart_toStartOf="@+id/blueCircle"
@@ -57,25 +85,59 @@
         tools:visibility="visible"/>
 
     <ImageView
-        android:id="@+id/greenCheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/grayCheck"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:src="@drawable/ic_baseline_check_25"
+        app:layout_constraintEnd_toEndOf="@+id/grayCircle"
+        app:layout_constraintStart_toStartOf="@+id/grayCircle"
+        app:layout_constraintTop_toBottomOf="@+id/grayCircle"
+        android:visibility="invisible"
+        tools:visibility="visible"/>
+
+    <ImageView
+        android:id="@+id/greenCheck"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_check_25"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="@+id/greenCircle"
         app:layout_constraintStart_toStartOf="@+id/greenCircle"
         app:layout_constraintTop_toBottomOf="@+id/greenCircle"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/violetCheck"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_check_25"
         android:visibility="invisible"
-        tools:visibility="visible"/>
+        app:layout_constraintEnd_toEndOf="@+id/violetCircle"
+        app:layout_constraintStart_toStartOf="@+id/violetCircle"
+        app:layout_constraintTop_toBottomOf="@+id/violetCircle"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/brownCheck"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_check_25"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/brownCircle"
+        app:layout_constraintStart_toStartOf="@+id/brownCircle"
+        app:layout_constraintTop_toBottomOf="@+id/brownCircle"
+        tools:visibility="visible" />
 
     <Button
         android:id="@+id/btnColorChanges"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:padding="20dp"
         android:text="색상 변경하기"
-        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/blueCheck" />
+        app:layout_constraintTop_toBottomOf="@+id/blueCircle" />
 
     <View
         android:id="@+id/view2"
@@ -83,13 +145,7 @@
         android:layout_height="1dp"
         android:layout_margin="20dp"
         android:background="@color/black"
-        app:layout_constraintStart_toStartOf="@+id/btnColorChanges"
-        app:layout_constraintTop_toBottomOf="@+id/btnColorChanges" />
-    <!--    <androidx.constraintlayout.widget.Guideline-->
-    <!--        android:id="@+id/guideline3"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="wrap_content"-->
-    <!--        android:orientation="horizontal"-->
-    <!--        app:layout_constraintGuide_percent="0.5" />-->
+        app:layout_constraintBottom_toTopOf="@+id/btnColorChanges"
+        app:layout_constraintStart_toStartOf="@+id/btnColorChanges" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
