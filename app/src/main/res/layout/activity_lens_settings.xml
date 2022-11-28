@@ -13,24 +13,25 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_marginTop="100dp"
+        android:layout_marginEnd="15dp"
         android:src="@drawable/pink_lens"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/blueCircle"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/blueCircle"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="10dp"
         android:src="@drawable/blue_lens"
-        app:layout_constraintStart_toEndOf="@+id/redCircle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/redCircle" />
 
     <ImageView
         android:id="@+id/grayCircle"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginStart="15dp"
         android:src="@drawable/gray_lens"
         app:layout_constraintStart_toEndOf="@+id/blueCircle"
         app:layout_constraintTop_toTopOf="@+id/blueCircle" />
