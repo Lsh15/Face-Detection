@@ -39,7 +39,17 @@
             android:layout_marginTop="100dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/view_finder" />
+            app:layout_constraintTop_toBottomOf="@+id/view_finder"/>
+
+<!--        <androidx.compose.ui.platform.ComposeView-->
+<!--            android:id="@+id/change_btn"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="색상 바꾸기"-->
+<!--            android:layout_marginTop="100dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/view_finder" />-->
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

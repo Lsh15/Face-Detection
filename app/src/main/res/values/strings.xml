@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FaceDetection</string>
+    <string name="title_activity_lens_setting_compose">LensSetting_Compose</string>
 </resources>
